@@ -7,7 +7,6 @@ function getRandomInt(min, max) {
 }
 
 // generate a new tetromino sequence
-// @see https://tetris.fandom.com/wiki/Random_Generator
 function generateSequence() {
   const sequence = ["I", "J", "L", "O", "S", "T", "Z"];
 
@@ -42,7 +41,6 @@ function getNextTetromino() {
 }
 
 // rotate an NxN matrix 90deg
-// @see https://codereview.stackexchange.com/a/186834
 function rotate(matrix) {
   const N = matrix.length - 1;
   const result = matrix.map((row, i) => row.map((val, j) => matrix[N - j][i]));
@@ -139,7 +137,6 @@ for (let row = -2; row < 20; row++) {
 }
 
 // how to draw each tetromino
-// @see https://tetris.fandom.com/wiki/SRS
 const tetrominos = {
   I: [
     [0, 0, 0, 0],
